@@ -344,11 +344,19 @@ namespace MyCSharp
                     return;
                 }
                 //处理截图冲突：
-                if ((游戏加载上边框.R == 16 && 游戏加载上边框.G == 36 && 游戏加载上边框.B == 66) && (游戏加载下边框.R == 74 && 游戏加载下边框.G == 24 && 游戏加载下边框.B == 24))//游戏加载中
+                if ((游戏加载上边框.R == 16 && 游戏加载上边框.G == 36 && 游戏加载上边框.B == 66) && (游戏加载下边框.R == 74 && 游戏加载下边框.G == 24 && 游戏加载下边框.B == 24))//游戏加载中（蓝色、红色）
                 {
                     return;
                 }
-                if ((游戏加载下边框.R == 16 && 游戏加载下边框.G == 36 && 游戏加载下边框.B == 66) && (游戏加载上边框.R == 74 && 游戏加载上边框.G == 24 && 游戏加载上边框.B == 24))//游戏加载中
+                if ((游戏加载上边框.R == 82 && 游戏加载上边框.G == 81 && 游戏加载上边框.B == 66) && (游戏加载下边框.R == 74 && 游戏加载下边框.G == 24 && 游戏加载下边框.B == 24))//游戏加载中（银色，红色）
+                {
+                    return;
+                }
+                if ((游戏加载上边框.R == 74 && 游戏加载上边框.G == 24 && 游戏加载上边框.B == 24) && (游戏加载下边框.R == 16 && 游戏加载下边框.G == 36 && 游戏加载下边框.B == 66))//游戏加载中（红色、蓝色）
+                {
+                    return;
+                }
+                if ((游戏加载上边框.R == 74 && 游戏加载上边框.G == 24 && 游戏加载上边框.B == 24) && (游戏加载下边框.R == 82 && 游戏加载下边框.G == 81 && 游戏加载下边框.B == 66))//游戏加载中（红色、银色）
                 {
                     return;
                 }
@@ -547,9 +555,9 @@ namespace MyCSharp
                     My.Computer.SetWindowCanNotRedraw("League of Legends (TM) Client");
                     //My.Computer.SetForegroundWindow("PVP.net 客户端");
                 }
-                LOL监控Timer.Enabled = true;
-                return;
             }
+            LOL监控Timer.Enabled = true;
+            return;
         }
         private void toolStripMenuItemPVP截图_Click(object sender, EventArgs e)
         {
